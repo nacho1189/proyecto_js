@@ -1,14 +1,11 @@
-console.log("hola mundo")
-/*  let numero1 = 20;      
-let numero2 = 10.5;
-let nombre = "jorge";
-let apellido = "perez";
+let msge1="hola";
+let msge2="el resultado";
+let msge3= "de la multiplicación de";
+let msge4= "es";
+let Blanco= " ";
+let ingresarNumero = parseInt(prompt("Ingresar Numero"));
 
-let resultado = numero1 + numero2;
-
-let saludo = "Hola"
-let saludo2 = "a"
-let saludo3 = " todo el"
-let blanco = " "
-
-let msg = saludo+ blanco + saludo2 + blanco + saludo3; */ 
+ for (let i = 1; i <= 10; i++) {
+    let resultado = ingresarNumero * i ;
+    console.log( msge1 + Blanco+ msge2 + Blanco+msge3 + Blanco+ ingresarNumero +" * "+ i + Blanco+ msge4  + " = " +  resultado);
+}
