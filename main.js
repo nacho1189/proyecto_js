@@ -26,7 +26,7 @@ let otraCotizacion = prompt(`Desea otra cotización?`);
 
 if((otraCotizacion == "SI") || (otraCotizacion =="si")){
 
-solicitarNombre();   
+   
 const cotizacionDolar = 40;
 const cotizarDolar = (pesos) => pesos / cotizacionDolar;
 const cotizarPesos = (dolar) => dolar * cotizacionDolar;
