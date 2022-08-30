@@ -1,6 +1,6 @@
 
 function solicitarNombre(){
-    var nombreIngresado = prompt(`Ingresar nombre`)
+    let nombreIngresado = prompt(`Ingresar nombre`)
     alert(`Hola estas en el cotizador ` + nombreIngresado)
 } 
 solicitarNombre();
