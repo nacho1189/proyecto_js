@@ -14,6 +14,7 @@ const productos =[
         color: 'Gris',
     },
 ];
+
 const marcas = [
     'Samsung',
     'Philips',
@@ -29,7 +30,7 @@ console.log(productos);
 
 
 while(option !== 0) {
-    option =Number(prompt(`Selecciona una opción \n 1 - Comprar Prducto \n 2 - Ver producto \n 0 -  Salir `));
+    option =Number(prompt(`Selecciona una opción \n 1 - Comprar Prducto \n 2 - Ver producto \n 3 - Borrar producto \n 0 -  Salir `));
     switch (option) {
         case 1:
             const producto = Number(prompt('Ingrese el producto que desea agregar \n 1 - Televisor \n 2 - Celular'))
