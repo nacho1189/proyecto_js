@@ -52,6 +52,6 @@ function deletePrductos(id) {
     productos = productos.filter(producto => producto.id != id); 
 }
 function getAllPrductos() {
-    console.log();
+    console.log('\n------------------------------\n');
     productos.forEach((producto) => console.log(producto.id + " - " + producto.marca  + " - " + producto.producto + " - " + producto.color));
 }
