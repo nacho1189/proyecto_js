@@ -53,5 +53,5 @@ function deletePrductos(id) {
 }
 function getAllPrductos() {
     console.log('\n------------------------------\n');
-    productos.forEach((producto) => console.log(producto.id + " - " + producto.marca  + " - " + producto.producto + " - " + producto.color));
+    productos.forEach((producto) => console.log(producto.id + " - " + producto.producto  + " - " + producto.marca + " - " + producto.color));
 }
