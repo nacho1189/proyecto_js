@@ -36,7 +36,7 @@ while(option !== 0) {
             getAllPrductos();
             break;
         case 3:
-            let deleteID = Number(prompt('Ingrese el ID del producto a eliminar:'));
+            let deleteID = Number(prompt('Ingrese el ID del producto a eliminar \n 1 - Televisor \n 2 - Celular\n 3 - Heladera'));
             deletePrductos(deleteID);
         case 0:
             alert('Gracias regrese pronto ');
