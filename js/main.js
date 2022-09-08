@@ -1,5 +1,5 @@
 let option
-const productos =[
+let productos =[
     {
         id: 1,
         producto: 'Televisor',
@@ -16,28 +16,49 @@ const productos =[
     {
 
         id: 3,
-        producto: 'heladera',
+        producto: 'Heladera',
         marca: 'LG',
         color: 'Blanco',
     },
 ];
+const producto = [
+    'Televisor',
+    'Celular',
+    'Heladera',
+    
+];
+const marca = [
+    'Philips',
+    'Samsung',
+    'LG',
+];
+const color = [
+    'Negro',
+    'Gris',
+    'Blanco',
+];
 
 
-console.log(productos);
 
 
 while(option !== 0) {
     option =Number(prompt(`Selecciona una opción \n 1 - Comprar Prducto \n 2 - Ver producto \n 3 - Borrar producto \n 0 -  Salir `));
     switch (option) {
         case 1:
-            const productos = Number(prompt('Ingrese el producto que desea agregar \n 1 - Televisor \n 2 - Celular\n 3 - Heladera'))
+            const producto = prompt('Ingrese el producto que desea agregar \n 1 - Televisor \n 2 - Celular\n 3 - Heladera')
+            const creationID = getLastID() + 1;
+            const marca = prompt('Ingrese la marca del producto \n 1 - Philips \n 2 - Samsung \n 3 - LG')
+            const color = prompt('Ingrese el color del producto \n 1 - Negro \n 2 - Gris \n 3 - Blanco')
+            agregarProducto(creationID, producto, marca, color);
             break;
         case 2:
             getAllPrductos();
+          
             break;
         case 3:
             let deleteID = Number(prompt('Ingrese el ID del producto a eliminar \n 1 - Televisor \n 2 - Celular\n 3 - Heladera'));
-            deletePrductos(deleteID);
+            deletePrducto(deleteID);
+            break; 
         case 0:
             alert('Gracias regrese pronto ');
             break;
@@ -48,10 +69,23 @@ while(option !== 0) {
     
 }
 
-function deletePrductos(id) {
+function deletePrducto(id) {
     productos = productos.filter(producto => producto.id != id); 
 }
 function getAllPrductos() {
     console.log('\n------------------------------\n');
     productos.forEach((producto) => console.log(producto.id + " - " + producto.producto  + " - " + producto.marca + " - " + producto.color));
+}
+function getLastID() {
+    const ids = productos.map(producto => producto.id);
+    return Math.max(...ids);
+}
+
+function agregarProducto(id, producto, marca, color) {
+    productos.push({
+        id,
+        producto,
+        marca,
+        color,
+    });
 }
