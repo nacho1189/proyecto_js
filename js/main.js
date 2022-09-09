@@ -21,18 +21,18 @@ let productos =[
         color: 'Blanco',
     },
 ];
-const producto = [
+const Producto = [
     'Televisor',
     'Celular',
     'Heladera',
     
 ];
-const marca = [
+const marcas = [
     'Philips',
     'Samsung',
     'LG',
 ];
-const color = [
+const colors = [
     'Negro',
     'Gris',
     'Blanco',
@@ -46,9 +46,9 @@ while(option !== 0) {
     switch (option) {
         case 1:
             const producto = prompt('Ingrese el producto que desea agregar \n 1 - Televisor \n 2 - Celular\n 3 - Heladera')
-            const creationID = getLastID() + 1;
             const marca = prompt('Ingrese la marca del producto \n 1 - Philips \n 2 - Samsung \n 3 - LG')
             const color = prompt('Ingrese el color del producto \n 1 - Negro \n 2 - Gris \n 3 - Blanco')
+            const creationID = getLastID() + 1;
             agregarProducto(creationID, producto, marca, color);
             break;
         case 2:
@@ -56,7 +56,7 @@ while(option !== 0) {
           
             break;
         case 3:
-            let deleteID = Number(prompt('Ingrese el ID del producto a eliminar \n 1 - Televisor \n 2 - Celular\n 3 - Heladera'));
+            let deleteID = Number(prompt('Ingrese el ID del producto a eliminar'));
             deletePrducto(deleteID);
             break; 
         case 0:
@@ -84,8 +84,9 @@ function getLastID() {
 function agregarProducto(id, producto, marca, color) {
     productos.push({
         id,
-        producto,
-        marca,
-        color,
+        producto: Producto[producto-1],
+        marca: marcas[marca -1],
+        color: colors[color - 1]
     });
 }
+

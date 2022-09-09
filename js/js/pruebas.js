@@ -72,3 +72,4 @@ while (option !==0) {
             console.log(id, producto,marca, color);
     })
     let elementoEliminado = productos.deletePrductos(deleteID)
+    
