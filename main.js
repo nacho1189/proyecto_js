@@ -1,7 +1,7 @@
 
 let productos = [
     {id: 1, nombre: "Heladera LG", tipo: "Heladera", cantidad: 1, desc: "", precio: 1200,  img: './img/heladeralg.jpg'},
-    {id: 2, nombre: "Samsung Smart Tv 43", tipo: "Tele", cantidad: 1, desc: "", precio: 1100, img: './img/SAMSUNG-tv.jfif'},
+    {id: 2, nombre: "Samsung Smart Tv 43", tipo: "Tele", cantidad: 1, desc: "", precio: 1100, img: './img/SAMSUNG-tv.jpg'},
     {id: 3, nombre: "Iphone 11", tipo: "Celular", cantidad: 1, desc: "", precio: 1200, img: './img/celular_iphone_11.jpg'},
 ]
 
