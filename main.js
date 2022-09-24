@@ -78,7 +78,12 @@ const agregarAlCarrito = (prodId) => {
         const item = productos.find((prod) => prod.id === prodId)
         carrito.push(item)
     }
-    
+    Swal.fire({
+        title: 'Genial!',
+        text: 'Haz agrgado un producto al Carrito!',
+        icon: 'success',
+        confirmButtonText: '😉'
+    })
     actualizarCarrito() 
 }
 
@@ -92,6 +97,13 @@ const eliminarDelCarrito = (prodId) => {
     carrito.splice(indice, 1) 
 
     actualizarCarrito() 
+    Swal.fire({
+        title: 'Que mal no lo vas a llevar 😢!',
+        text: 'Haz eliminado un producto de Carrito correctamente!',
+        icon: 'success',
+        confirmButtonText: '😔'
+    })
+
    
     console.log(carrito)
 }
