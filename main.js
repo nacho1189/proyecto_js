@@ -1,14 +1,13 @@
 
 let productos = [
     {id: 1, nombre: "Heladera LG", tipo: "Heladera", cantidad: 1, desc: "", precio: 1200,  img: './img/heladeralg.jpg'},
-    {id: 2, nombre: "Samsung Smart Tv 43", tipo: "Tele", cantidad: 1, desc: "", precio: 1100, img: './img/SAMSUNG-tv.jpg'},
+    {id: 2, nombre: "Samsung Smart Tv 43", tipo: "Tele", cantidad: 1, desc: "", precio: 1100, img: './img/samsung-tv.jpg'},
     {id: 3, nombre: "Iphone 11", tipo: "Celular", cantidad: 1, desc: "", precio: 1200, img: './img/celular_iphone_11.jpg'},
 ]
 
 
 
 const contenedorProductos = document.getElementById('contenedor-productos')
-
 
 
 const contenedorCarrito = document.getElementById('carrito-contenedor')
@@ -62,7 +61,6 @@ productos.forEach((producto) => {
 })
 
 
-
 const agregarAlCarrito = (prodId) => {
 
     
@@ -79,14 +77,13 @@ const agregarAlCarrito = (prodId) => {
         carrito.push(item)
     }
     Swal.fire({
-        title: 'Genial!',
+        title: 'Genial 🤩!',
         text: 'Haz agrgado un producto al Carrito!',
         icon: 'success',
         confirmButtonText: '😉'
     })
     actualizarCarrito() 
 }
-
 
 
 const eliminarDelCarrito = (prodId) => {
@@ -103,10 +100,9 @@ const eliminarDelCarrito = (prodId) => {
         icon: 'success',
         confirmButtonText: '😔'
     })
-
-   
     console.log(carrito)
 }
+
 
 const actualizarCarrito = () => {
    
@@ -132,6 +128,8 @@ const actualizarCarrito = () => {
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
   
 }
+
+
 const contenedorModal = document.getElementsByClassName('modal-contenedor')[0]
 const botonAbrir = document.getElementById('boton-carrito')
 const botonCerrar = document.getElementById('carritoCerrar')
