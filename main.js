@@ -1,10 +1,20 @@
 
-let productos = [
+let productos1 = [
     {id: 1, nombre: "Heladera LG", tipo: "Heladera", cantidad: 1, desc: "", precio: 1200,  img: './img/heladeralg.jpg'},
     {id: 2, nombre: "Samsung Smart Tv 43", tipo: "Tele", cantidad: 1, desc: "", precio: 1100, img: './img/samsung-tv.jpg'},
     {id: 3, nombre: "Iphone 11", tipo: "Celular", cantidad: 1, desc: "", precio: 1200, img: './img/celular_iphone_11.jpg'},
 ]
 
+let productos2 = [
+    {id: 4, nombre: "Heladera LG", tipo: "Heladera", cantidad: 1, desc: "", precio: 1200,  img: './img/heladeralg.jpg'},
+    {id: 5, nombre: "Samsung Smart Tv 43", tipo: "Tele", cantidad: 1, desc: "", precio: 1100, img: './img/samsung-tv.jpg'},
+    {id: 6, nombre: "Iphone 11", tipo: "Celular", cantidad: 1, desc: "", precio: 1200, img: './img/celular_iphone_11.jpg'},
+    {id: 7, nombre: "Heladera LG", tipo: "Heladera", cantidad: 1, desc: "", precio: 1200,  img: './img/heladeralg.jpg'},
+    {id: 8, nombre: "Samsung Smart Tv 43", tipo: "Tele", cantidad: 1, desc: "", precio: 1100, img: './img/samsung-tv.jpg'},
+]
+
+//spreed de arrays
+let productos=[...productos1,...productos2,];
 
 
 const contenedorProductos = document.getElementById('contenedor-productos')
@@ -24,12 +34,7 @@ const cantidadTotal = document.getElementById('cantidadTotal')
 
 let carrito = []
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     if (localStorage.getItem('carrito')){
-//         carrito = JSON.parse(localStorage.getItem('carrito'))
-//         actualizarCarrito()
-//     }
-// })
+
 document.addEventListener('DOMContentLoaded', () => {
     //operador terneario
     let storage=localStorage.getItem('carrito');
