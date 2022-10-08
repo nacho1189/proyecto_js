@@ -1,29 +1,23 @@
-const lista = document.getElementById('contenedor-productos')
-fetch('/fetch.json')
-.then( (res) => res.json())
-.then( (productos) => {
+const btn= document.querySelector('#btn')
 
-productos.forEach((producto) => {
-const div = document.createElement('div')
-div.classList.add('producto')
-div.innerHTML = `
-<img src=${producto.img} alt= "">
-<h3>${producto.nombre}</h3>
-<p>${producto.desc}</p>
-<p class="precioProducto">Precio:USD ${producto.precio}</p>
-<button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+const lista = document.querySelector('#lista')
 
-`
-contenedorProductos.appendChild(div)
+btn.addEventListener('click',()=>{
 
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then( (resp) => resp.json() )
+    .then( (data) => {
+       
+        data.forEach((post) => {
+            const li = document.createElement('li')
+            li.innerHTML = `
+                <h4>${post.title}</h4>
+                <p>${post.body}</p>
+            `
 
-const boton = document.getElementById(`agregar${producto.id}`)
+            lista.append(li);
 
+        });
 
-boton.addEventListener('click', () => {
-
-    agregarAlCarrito(producto.id)
-   
-})
-})
+    })
 })
