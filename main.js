@@ -6,14 +6,14 @@ let productos1 = [
 ]
 
 let productos2 = [
-    {id: 4, nombre: "Heladera LG", tipo: "Heladera", cantidad: 1, desc: "", precio: 1200,  img: './img/heladeralg.jpg'},
-    {id: 5, nombre: "Samsung Smart Tv 43", tipo: "Tele", cantidad: 1, desc: "", precio: 1100, img: './img/samsung-tv.jpg'},
-    {id: 6, nombre: "Iphone 11", tipo: "Celular", cantidad: 1, desc: "", precio: 1200, img: './img/celular_iphone_11.jpg'},
-    {id: 7, nombre: "Heladera LG", tipo: "Heladera", cantidad: 1, desc: "", precio: 1200,  img: './img/heladeralg.jpg'},
-    {id: 8, nombre: "Samsung Smart Tv 43", tipo: "Tele", cantidad: 1, desc: "", precio: 1100, img: './img/samsung-tv.jpg'},
+    {id: 4, nombre: "Tarjeta Grafica", tipo: "Componente para PC", cantidad: 1, desc: "", precio: 900,  img: './img/Grafica.jpg'},
+    {id: 5, nombre: "Laptop HP", tipo: "Laptop", cantidad: 1, desc: "", precio: 1400, img: './img/laptopHP.jpg'},
+    {id: 6, nombre: "Computador Gamer", tipo: "PC", cantidad: 1, desc: "", precio: 2200, img: './img/pc1.jpg'},
+    {id: 7, nombre: "Silla Gamer", tipo: "Silla", cantidad: 1, desc: "", precio: 300,  img: './img/sillagamer.jpg'},
+    {id: 8, nombre: "Escritorio Gamer", tipo: "Escritorio", cantidad: 1, desc: "", precio: 360, img: './img/escritorio.jpg'},
 ]
 
-//spreed de arrays
+
 let productos=[...productos1,...productos2,];
 
 

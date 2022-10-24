@@ -1,7 +1,8 @@
 [{
     "id": 9,
     "nombre": "Tarjeta Grafica",
-    "tipo": "Componente para PC", "cantidad": 1,
+    "tipo": "Componente para PC",
+    "cantidad": 1,
     "desc": "",
     "precio": 900,
     "img": "./img/Grafica.jpg"

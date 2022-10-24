@@ -324,3 +324,9 @@ p {
 .boton-eliminar:focus {
     outline: none;
 }
+#btn {
+    border: none;
+    background-color: royalblue;
+    color: white;
+
+}

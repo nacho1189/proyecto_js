@@ -1,6 +1,7 @@
 const btn= document.querySelector('#btn')
 
 const lista = document.querySelector('#lista')
+const contenedorCarrito = document.getElementById('carrito-contenedor')
 
 btn.addEventListener('click',()=>{
 
